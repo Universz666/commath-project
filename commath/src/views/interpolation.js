@@ -14,6 +14,7 @@ import {
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { getInterpolation } from "../functions/function";
+import Navbar from "./Components/Navbar";
 
 function Interpolation() {
   const navigate = useNavigate();
@@ -51,18 +52,18 @@ function Interpolation() {
 
   return (
     <div>
-      <Row style={{ marginTop: "5%" }}>
+      <Navbar/>
+      <div className="text-center" style={{ marginTop: "5%" }}>
+           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation & Curve fitting</h2>
+        </div>
+        <div className="text-center">
+           <h4>Newton's Method </h4>
+           <p>xi, yi เป็นอนุกรมของคู่ลำดับ</p>
+           <p>t เป็นเวลาตามแนวนอนหรือแกน x</p>
+        </div>
+      <Row style={{ marginTop: "3%" }}>
         <Col sm="3"></Col>
         <Col sm="6">
-        <div className="text-center">
-           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation</h2>
-        </div>
-        <div className="text-center">
-           <p>exam:</p>
-           <p>t = 5</p>
-           <p>x = [ 0, 8, 14, 20, 23, 30 ]</p>
-           <p>y = [ 0, 50, 96, 110, 100, 86 ]</p>
-        </div>
        
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
@@ -256,20 +257,20 @@ function Interpolation() {
                 </Row>
               </div>
             </Row>
-                <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
+                <h4 style={{ marginBottom: "10px" }}>Result : {result}</h4>
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="success">
                   <div style={{ width: 300 }}>
-                    <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Let's go !</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
                 <Button onClick={back} color="secondary">
                   <div style={{ width: 100 }}>
-                    <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Back</h3>
                   </div>
                 </Button>
               </Col>

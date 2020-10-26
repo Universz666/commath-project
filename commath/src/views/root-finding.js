@@ -14,6 +14,7 @@ import {
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { getRootFinding } from "../functions/function";
+import Navbar from "./Components/Navbar";
 
 function RootFinding() {
   const navigate = useNavigate();
@@ -40,20 +41,18 @@ function RootFinding() {
 
   return (
     <div>
-      <Row style={{ marginTop: "5%" }}>
-        <Col sm="3"></Col>
-        <Col sm="6">
-          <div className="text-center">
+      <Navbar/>
+      <div className="text-center" style={{ marginTop: "5%" }}>
             <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
               Root-finding
             </h2>
           </div>
           <div className="text-center">
-            <p>exam:</p>
-            <p>a = 0</p>
-            <p>b = 1</p>
-            <p>dx = 0.0001</p>
+            <p>การหาคำตอบของสมการ f(x)=0 หมายถึงการหาค่า x ที่จำทำให้สมการ f(x) มีค่าเป็นศูนย์ คำตอบของสมการเรียกอีกอย่างว่า root ซึ่งแต่ละฟังก์ชันอาจมี 0, 1, หรือ หลายคำตอบก็ได้</p>
           </div>
+      <Row style={{ marginTop: "3%" }}>
+        <Col sm="3"></Col>
+        <Col sm="6">
 
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
@@ -109,20 +108,20 @@ function RootFinding() {
                 </Row>
               </div>
             </Row>
-            <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
+            <h4 style={{ marginBottom: "10px" }}>Result : {result}</h4>
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="success">
                   <div style={{ width: 300 }}>
-                    <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Let's go !</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
                 <Button onClick={back} color="secondary">
                   <div style={{ width: 100 }}>
-                    <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Back</h3>
                   </div>
                 </Button>
               </Col>

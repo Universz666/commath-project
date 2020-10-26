@@ -14,6 +14,7 @@ import {
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { getElimination } from "../functions/function";
+import Navbar from "./Components/Navbar";
 
 function Elimination() {
   const navigate = useNavigate();
@@ -55,21 +56,18 @@ function Elimination() {
 
   return (
     <div>
-      <Row style={{ marginTop: "5%" }}>
+      <Navbar/>
+      <div className="text-center" style={{ marginTop: "5%" }}>
+           <h1 style={{ marginTop: "20px", marginRight: "20px" }}>Systems of Linear Algebraic Equations</h1>
+        </div>
+        <div className="text-center">
+           <p>Solve the equations Ax=b</p>
+           <p>Find solution of n linear, algebraic equations in n variables.</p>
+           <p>กรอกค่าตามช่องของ Metrix</p>       
+        </div>
+      <Row style={{ marginTop: "3%" }}>
         <Col sm="4"></Col>
         <Col sm="4">
-        <div className="text-center">
-           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Linear Equations</h2>
-        </div>
-        <div className="text-center">
-           <p>exam:</p>
-           <p>A: [ [ 6 -4 1 ]
-                  [ -4 6 -4 ]
-                  [ 1 -4 6 ] ]
-           </p>
-           <p>b: [-14 36 6 ]</p>
-           
-        </div>
           <Card style={{ alignItems: "center" }}>
 
 
@@ -254,16 +252,16 @@ function Elimination() {
             <h4 style={{ marginBottom: "10px" }}>x2: {x2}</h4>
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="success">
                   <div style={{ width: 300 }}>
-                    <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Let's go !</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
                 <Button onClick={back} color="secondary">
                   <div style={{ width: 100 }}>
-                    <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Back</h3>
                   </div>
                 </Button>
               </Col>

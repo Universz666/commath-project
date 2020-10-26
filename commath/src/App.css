@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Prompt", sans-serif;
 }
 
 .App-logo {
@@ -52,3 +53,7 @@ p
   text-align: center;
   
 }
+td {
+  font-family: 'Prompt', sans-serif;;
+}
+

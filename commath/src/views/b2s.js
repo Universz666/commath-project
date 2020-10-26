@@ -14,6 +14,8 @@ import {
 import "../App.css";
 import { getB2s } from "../functions/function";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+
 
 function B2s() {
   const navigate = useNavigate();
@@ -31,17 +33,21 @@ function B2s() {
 
   return (
     <div class="body">
-      <Row style={{ marginTop: "15%" }}>
+      <Navbar/>
+      <div className="text-center" style={{ marginTop: "10%" }}>
+            <h1 style={{ marginTop: "20px", marginRight: "20px" }}>
+              Basic Computing
+            </h1>
+            <h4 style={{ marginTop: "20px", marginRight: "20px" }}>
+              แปลงเลขฐาน 2 ให้เป็นเลขทั่วไป
+            </h4>
+          </div>
+          <div className="text-center">
+            <p>กรอกเลขฐาน 2 ที่ต้องการแปลง</p>
+          </div>
+      <Row style={{ marginTop: "5%" }}>
         <Col sm="2"></Col>
         <Col sm="8">
-          <div className="text-center">
-            <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
-              Basic Computing
-            </h2>
-          </div>
-          <div className="text-center">
-            <p>exam: 01111000000001010000000000000000</p>
-          </div>
           <div>
             <Row>
               <Col sm="2"></Col>
@@ -57,21 +63,22 @@ function B2s() {
                     type="text"
                     name="bit2string"
                     id="bit2string"
+                    placeholder="Ex. 10111011"
                     onChange={(e) => setBit2string(e.target.value)}
                   />
-                  <h4>ผลลัพธ์: {result}</h4>
+                  <h4 >Result : {result}</h4>
                   <Row style={{ marginBottom: "30px" }}>
                     <Col sm="8">
-                      <Button onClick={generate} color="primary">
+                      <Button onClick={generate} color="success">
                         <div style={{ width: 300 }}>
-                          <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                          <h3 style={{ marginTop: "10px" }}>Convert</h3>
                         </div>
                       </Button>
                     </Col>
                     <Col sm="4">
                       <Button onClick={back} color="secondary">
                         <div style={{ width: 100 }}>
-                          <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                          <h3 style={{ marginTop: "10px" }}>Back</h3>
                         </div>
                       </Button>
                     </Col>

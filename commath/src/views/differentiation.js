@@ -14,6 +14,7 @@ import {
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { getDifferentiation } from "../functions/function";
+import Navbar from "./Components/Navbar";
 
 function Differentiation() {
   const navigate = useNavigate();
@@ -39,20 +40,21 @@ function Differentiation() {
 
   return (
     <div>
+      <Navbar/>
+      <div className="text-center" style={{ marginTop: "5%" }}>
+            <h1 style={{ marginTop: "20px", marginRight: "20px" }}>
+              Differentiation
+            </h1>
+          </div>
+          <div className="text-center">
+            <h4 style={{ marginTop :"1%"}}>
+            Richardson Extrapolation
+            </h4>
+            <p></p>
+          </div>
       <Row style={{ marginTop: "5%" }}>
         <Col sm="4"></Col>
         <Col sm="4">
-          <div className="text-center">
-            <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
-              Differentiation
-            </h2>
-          </div>
-          <div className="text-center">
-            <p>exam:</p>
-            <p>h = 0.64</p>
-            <p>p = 2</p>
-          </div>
-
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
               <Col></Col>
@@ -92,20 +94,20 @@ function Differentiation() {
                 </Row>
               </div>
             </Row>
-            <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
+            <h4 style={{ marginBottom: "10px" }}>Result : {result}</h4>
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="success">
                   <div style={{ width: 300 }}>
-                    <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Let's go !</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
                 <Button onClick={back} color="secondary">
                   <div style={{ width: 100 }}>
-                    <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                    <h3 style={{ marginTop: "10px" }}>Back</h3>
                   </div>
                 </Button>
               </Col>

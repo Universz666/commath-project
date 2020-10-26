@@ -8,13 +8,14 @@ import Differentiation from "./views/differentiation";
 import Integration from "./views/integration";
 import RootFinding from "./views/root-finding";
 
+
 const routes = [
   {
     path: "/",
     element: <Main />,
   },
   {
-    path: "commath-pj",
+    path: "commath-project",
     element: <Main />,
   },
   {
